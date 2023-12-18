@@ -1,12 +1,15 @@
 import type { SVGSparkle } from '#build/components';
 <template>
-  <div class="min-h-[600px] flex flex-col items-center">
+  <div class="flex flex-col items-center pt-40 pb-20 mono">
     <div class="relative">
-      <h1 class="text-9xl font-semibold mono">learn. collaborate.</h1>
+      <h1 class="text-9xl font-semibold">learn. collaborate.</h1>
       <div class="w-full flex gap-80 items-center my-5">
-        <h1 class="text-9xl font-semibold mono">create.</h1>
-        <button class="w-[300px] h-[75px] bg-black mono text-3xl text-white">
+        <h1 class="text-9xl font-semibold">create.</h1>
+        <button
+          class="h-[75px] bg-black mono p-5 text-3xl text-white flex justify-center items-center gap-5"
+        >
           Get Started
+          <SVGLinesArrowStraight />
         </button>
       </div>
       <SVGSparkle class="absolute top-[-4rem] right-0" />

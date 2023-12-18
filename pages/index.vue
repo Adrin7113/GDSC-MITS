@@ -1,6 +1,7 @@
 <template>
-  <div class="px-10 pt-20">
+  <div>
     <Landing />
+    <EventsLatestEvents />
   </div>
 </template>
 <script setup></script>
