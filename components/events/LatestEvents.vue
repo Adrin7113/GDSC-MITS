@@ -1,24 +1,43 @@
 <template>
   <div class="w-full min-h-[500px] p-20 bg-gRed mono">
     <h1
+      @click="hanldeScroll"
       class="text-white flex gap-5 w-max justify-start items-center h-max text-3xl border-b-4 border-white border-double pb-2"
     >
       Latest Events <SVGLinesArrowTilted width="25" height="25" />
     </h1>
-    <div class="pt-20 mx-20 flex overflow-scroll gap-5 no-scrollbar">
-      <EventsEventCard
-        v-for="event in tempEvents"
-        :name="event.name"
-        :time="event.time"
-        :date="event.date"
-        :description="event.description"
-        :link="event.link"
-        :location="event.location"
+    <div class="relative">
+      <div
+        class="pt-20 mx-20 flex overflow-scroll gap-5 no-scrollbar"
+        ref="scrollableRef"
+      >
+        <EventsEventCard
+          v-for="event in tempEvents"
+          :name="event.name"
+          :time="event.time"
+          :date="event.date"
+          :description="event.description"
+          :link="event.link"
+          :location="event.location"
+        />
+      </div>
+      <SVGLinesScrollArrow
+        v-if="!scrollHideRight"
+        @click="hanldeScroll('R')"
+        class="absolute bg-black/70 top-[52%] right-28 rounded-full"
+      />
+      <SVGLinesScrollArrow
+        v-if="!scrollHideLeft"
+        @click="hanldeScroll('L')"
+        class="absolute bg-black/70 top-[52%] left-28 rotate-180 rounded-full"
       />
     </div>
   </div>
 </template>
 <script setup>
+const scrollableRef = ref(null);
+const scrollHideRight = ref(false);
+const scrollHideLeft = ref(true);
 const tempEvents = [
   {
     name: "Introduction to industry level development",
@@ -84,4 +103,29 @@ const tempEvents = [
     location: "Online",
   },
 ];
+const hanldeScroll = (direction) => {
+  const scrollable = scrollableRef.value;
+  const scrollDistance = window.innerWidth / 3;
+  if (direction === "R") {
+    scrollHideLeft.value = false;
+    if (scrollable.scrollLeft + scrollDistance >= scrollable.scrollLeftMax) {
+      scrollHideRight.value = true;
+    }
+    scrollable.scrollBy({
+      left: scrollDistance,
+      behavior: "smooth",
+    });
+    return;
+  } else if (direction === "L") {
+    scrollHideRight.value = false;
+    if (scrollable.scrollLeft - scrollDistance <= 0) {
+      scrollHideLeft.value = true;
+    }
+    scrollable.scrollBy({
+      left: -scrollDistance,
+      behavior: "smooth",
+    });
+    return;
+  }
+};
 </script>
