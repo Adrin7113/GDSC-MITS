@@ -1,22 +1,22 @@
 <template>
-  <div class="w-full min-h-[500px] p-20 bg-gRed mono relative py-44">
+  <div class="w-full min-h-[500px] p-20 bg-gBlue mono relative pt-44">
     <SVGSparkle
-      color1="#892CFF"
-      color2="#36DB32"
+      color1="#000000"
+      color2="#FFFFFF"
       color3="#FCFF71"
-      class="absolute top-[-30px] left-20"
+      class="absolute top-[50px] right-20"
     />
     <SVGSparkle
-      color1="#892CFF"
-      color2="#36DB32"
+      color1="#36DB32"
+      color2="#FFFFFF"
       color3="#FCFF71"
-      class="absolute bottom-10 right-10"
+      class="absolute bottom-10 left-10"
     />
     <h1
       @click="hanldeScroll"
       class="text-white flex gap-5 w-max justify-start items-center h-max text-5xl font-bold border-b-4 border-white pb-2"
     >
-      Latest Events <SVGLinesArrowTilted width="25" height="25" />
+      Previous Events <SVGLinesArrowTilted width="25" height="25" />
     </h1>
     <div class="relative">
       <div
@@ -53,6 +53,31 @@
       >
         <SVGLinesScrollArrow class="bg-black/70 rounded-full p-2" />
         <h1 class="text-xl text-white">Swipe</h1>
+      </div>
+    </div>
+    <div class="flex w-full justify-center pt-10">
+      <div class="flex justify-center items-center gap-5">
+        <div
+          class="bg-black text-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+        >
+          1
+        </div>
+        <div
+          class="bg-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+        >
+          2
+        </div>
+        <div
+          class="bg-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+        >
+          3
+        </div>
+        <div class="text-xl font-bold">...</div>
+        <div
+          class="bg-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+        >
+          10
+        </div>
       </div>
     </div>
   </div>

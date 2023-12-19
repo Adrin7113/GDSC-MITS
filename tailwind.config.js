@@ -13,6 +13,8 @@ export default {
       colors: {
         gCream: "#FAFDB2",
         gRed: "#EA4335",
+        gBlue: "#6038FF",
+        gYellow: "#FAFD5D",
       },
     },
   },

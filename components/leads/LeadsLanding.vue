@@ -1,29 +1,29 @@
 <template>
-  <div class="w-full min-h-[500px] p-20 bg-gRed mono relative py-44">
+  <div class="w-full min-h-[500px] p-20 bg-gYellow mono relative pt-44">
     <SVGSparkle
-      color1="#892CFF"
-      color2="#36DB32"
-      color3="#FCFF71"
-      class="absolute top-[-30px] left-20"
+      color1="#7000FF"
+      color2="#000000"
+      color3="#6038FF"
+      class="absolute top-[50px] right-20"
     />
     <SVGSparkle
-      color1="#892CFF"
-      color2="#36DB32"
-      color3="#FCFF71"
-      class="absolute bottom-10 right-10"
+      color1="#000000"
+      color2="#005FFF"
+      color3="#36DB32"
+      class="absolute bottom-10 left-10"
     />
     <h1
       @click="hanldeScroll"
-      class="text-white flex gap-5 w-max justify-start items-center h-max text-5xl font-bold border-b-4 border-white pb-2"
+      class="text-black flex gap-5 w-max justify-start items-center h-max text-5xl font-bold border-b-4 border-black pb-2"
     >
-      Latest Events <SVGLinesArrowTilted width="25" height="25" />
+      GDSC Leads
     </h1>
     <div class="relative">
       <div
         class="pt-20 md:mx-20 flex overflow-scroll gap-5 no-scrollbar"
         ref="scrollableRef"
       >
-        <EventsEventCard
+        <LeadsLeadCard
           v-for="event in tempEvents"
           :name="event.name"
           :subName="event.subName"
@@ -53,6 +53,20 @@
       >
         <SVGLinesScrollArrow class="bg-black/70 rounded-full p-2" />
         <h1 class="text-xl text-white">Swipe</h1>
+      </div>
+    </div>
+    <div class="flex w-full justify-center pt-10">
+      <div class="flex justify-center items-center gap-5">
+        <div
+          class="bg-black text-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+        >
+          2023 - 2024
+        </div>
+        <div
+          class="bg-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+        >
+          2022 - 2023
+        </div>
       </div>
     </div>
   </div>
