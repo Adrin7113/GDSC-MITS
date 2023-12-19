@@ -1,14 +1,26 @@
 <template>
-  <div class="w-full min-h-[500px] p-20 bg-gRed mono">
+  <div class="w-full min-h-[500px] p-20 bg-gRed mono relative py-44">
+    <SVGSparkle
+      color1="#892CFF"
+      color2="#36DB32"
+      color3="#FCFF71"
+      class="absolute top-[-30px] left-20"
+    />
+    <SVGSparkle
+      color1="#892CFF"
+      color2="#36DB32"
+      color3="#FCFF71"
+      class="absolute bottom-10 right-10"
+    />
     <h1
       @click="hanldeScroll"
-      class="text-white flex gap-5 w-max justify-start items-center h-max text-3xl border-b-4 border-white border-double pb-2"
+      class="text-white flex gap-5 w-max justify-start items-center h-max text-5xl font-bold border-b-4 border-white border-double pb-2"
     >
       Latest Events <SVGLinesArrowTilted width="25" height="25" />
     </h1>
     <div class="relative">
       <div
-        class="pt-20 mx-20 flex overflow-scroll gap-5 no-scrollbar"
+        class="pt-20 md:mx-20 flex overflow-scroll gap-5 no-scrollbar"
         ref="scrollableRef"
       >
         <EventsEventCard
@@ -24,13 +36,19 @@
       <SVGLinesScrollArrow
         v-if="!scrollHideRight"
         @click="hanldeScroll('R')"
-        class="absolute bg-black/70 top-[52%] right-28 rounded-full"
+        class="hidden md:block absolute bg-black/70 top-[52%] right-5 md:right-28 rounded-full"
       />
       <SVGLinesScrollArrow
         v-if="!scrollHideLeft"
         @click="hanldeScroll('L')"
-        class="absolute bg-black/70 top-[52%] left-28 rotate-180 rounded-full"
+        class="hidden md:block absolute bg-black/70 top-[52%] left-28 rotate-180 rounded-full"
       />
+      <div
+        class="absolute md:hidden top-[50%] right-[-65px] flex flex-col justify-center items-center"
+      >
+        <SVGLinesScrollArrow class="bg-black/70 rounded-full p-2" />
+        <h1 class="text-xl text-white">More</h1>
+      </div>
     </div>
   </div>
 </template>

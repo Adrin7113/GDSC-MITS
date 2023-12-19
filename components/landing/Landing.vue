@@ -2,7 +2,7 @@ import type { SVGSparkle } from '#build/components';
 <template>
   <div class="flex flex-col items-center pt-40 pb-20 mono">
     <div class="relative">
-      <h1 class="text-9xl font-semibold">learn. collaborate.</h1>
+      <h1 class="text-9xl font-semibold">learn. Collaborate.</h1>
       <div class="w-full flex gap-80 items-center my-5">
         <h1 class="text-9xl font-semibold">create.</h1>
         <button
