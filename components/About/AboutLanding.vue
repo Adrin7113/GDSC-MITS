@@ -20,7 +20,7 @@
     >
       About Us <SVGLinesArrowTilted color="black" width="25" height="25" />
     </h1>
-    <div class="w-full flex flex-col gap-5 lg:ml-44">
+    <div class="w-full flex flex-col gap-5 lg:pl-44">
       <div class="flex flex-col 2xl:flex-row">
         <span class="text-5xl md:text-6xl md:mt-10 font-medium">
           Work smarter.
@@ -37,7 +37,7 @@
       class="lg:mx-44 py-10"
       alt="The GDSC Logo."
     /> -->
-    <div class="flex flex-col lg:flex-row gap-10 xl:gap-64 lg:px-44 mt-10">
+    <div class="flex flex-col lg:flex-row gap-10 xl:gap-64 lg:pl-44 mt-10">
       <p class="w-full lg:w-1/2 text-lg">
         Google development Student Clubs is a community for student developers
         to help them immerse in technology. GDSC helps student to learn
