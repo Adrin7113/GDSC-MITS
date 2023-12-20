@@ -15,6 +15,7 @@ export default {
         gRed: "#EA4335",
         gBlue: "#6038FF",
         gYellow: "#FAFD5D",
+        gGreen: "#27AA62",
       },
     },
   },
