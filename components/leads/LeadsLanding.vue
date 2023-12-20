@@ -1,22 +1,24 @@
 <template>
-  <section class="w-full min-h-[500px] p-20 bg-gYellow mono relative pt-44">
+  <section
+    class="w-full min-h-[500px] p-5 md:p-20 bg-gYellow mono relative pt-24 md:pt-44"
+  >
     <SVGSparkle
       color1="#7000FF"
       color2="#000000"
       color3="#6038FF"
-      class="absolute top-[50px] right-20"
+      class="absolute top-5 md:top-[50px] right-5 md:right-20 w-16 h-16 md:w-auto md:h-auto"
     />
     <SVGSparkle
       color1="#000000"
       color2="#005FFF"
       color3="#36DB32"
-      class="absolute bottom-10 left-10"
+      class="absolute bottom-5 md:bottom-10 left-2 md:left-10 w-16 h-16 md:w-auto md:h-auto"
     />
     <h1
       @click="hanldeScroll"
-      class="text-black flex gap-5 w-max justify-start items-center h-max text-5xl font-bold border-b-4 border-black pb-2"
+      class="text-black flex gap-5 w-max justify-start items-center h-max text-3xl md:text-5xl font-bold border-b-4 border-black pb-2"
     >
-      GDSC Leads
+      GDSC Leads <SVGLinesArrowTilted color="black" width="25" height="25" />
     </h1>
     <div class="relative">
       <div
@@ -48,15 +50,17 @@
         @click="hanldeScroll('L')"
         class="hidden md:block absolute bg-black top-[52%] left-5 md:left-8 p-2 rotate-180 cursor-pointer"
       />
-      <figure
-        class="absolute md:hidden top-[50%] right-[-70px] flex flex-col justify-center items-center"
-      >
-        <SVGLinesScrollArrow class="bg-black/70 rounded-full p-2" />
-        <span class="text-xl text-white">Swipe</span>
+      <figure class="mt-5 md:hidden flex flex-col justify-center items-center">
+        <SVGLinesArrowStraight
+          width="100"
+          height="50"
+          class="md:hidden bg-black p-2"
+        />
+        <span class="text-2xl mt-2">Swipe</span>
       </figure>
     </div>
     <section class="flex w-full justify-center pt-10">
-      <nav class="flex justify-center items-center gap-5">
+      <nav class="flex flex-col md:flex-row justify-center items-center gap-5">
         <div
           class="bg-black text-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
         >

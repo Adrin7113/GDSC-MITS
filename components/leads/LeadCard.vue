@@ -1,18 +1,18 @@
 <template>
   <article
-    class="w-[400px] h-[450px] shrink-0 bg-white flex flex-col gap-2 p-5 pt-10 overflow-y-scroll no-scrollbar"
+    class="w-[300px] h-[500px] md:w-[400px] md:h-[450px] shrink-0 bg-white flex flex-col gap-2 p-5 pt-10 overflow-y-scroll no-scrollbar"
   >
     <header
-      class="flex gap-5 justify-center items-center border-b-2 border-black pb-5"
+      class="flex flex-col md:flex-row gap-5 justify-center items-center border-b-2 border-black pb-5"
     >
-      <section>
-        <h1 class="text-xl font-bold text-center">
+      <section class="flex flex-col">
+        <h1 class="text-xl font-bold md:text-center">
           {{ tempLead.name }}
         </h1>
-        <span class="text-xl pl-4">
+        <span class="text-xl md:pl-4">
           {{ tempLead.division }}
         </span>
-        <span class="text-xl pl-4">
+        <span class="text-xl md:pl-4">
           {{ tempLead.role }}
         </span>
       </section>

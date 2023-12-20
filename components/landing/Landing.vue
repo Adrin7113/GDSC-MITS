@@ -35,7 +35,7 @@ import type { SVGSparkle } from '#build/components';
         </div>
       </div>
       <SVGSparkle
-        class="absolute top-[-4rem] right-0 w-16 h-16 md:w-auto md:h-auto"
+        class="absolute top-0 md:top-[-4rem] right-0 w-16 h-16 md:w-auto md:h-auto"
       />
     </section>
     <p class="mono w-2/3 text-left lg:text-center">
