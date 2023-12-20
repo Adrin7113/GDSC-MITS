@@ -1,24 +1,26 @@
 <template>
-  <div class="w-full min-h-[500px] p-20 bg-gBlue mono relative pt-44">
+  <section
+    class="w-full min-h-[500px] px-5 md:p-20 bg-gBlue mono relative py-24 md:py-44"
+  >
     <SVGSparkle
       color1="#000000"
       color2="#FFFFFF"
       color3="#FCFF71"
-      class="absolute top-[50px] right-20"
+      class="absolute top-5 md:top-[50px] right-5 md:right-20 w-16 h-16 md:w-auto md:h-auto"
     />
     <SVGSparkle
       color1="#36DB32"
       color2="#FFFFFF"
       color3="#FCFF71"
-      class="absolute bottom-10 left-10"
+      class="absolute bottom-2 left-5 md:bottom-10 md:left-10 w-16 h-16 md:w-auto md:h-auto"
     />
     <h1
       @click="hanldeScroll"
-      class="text-white flex gap-5 w-max justify-start items-center h-max text-5xl font-bold border-b-4 border-white pb-2"
+      class="text-white flex gap-5 w-max justify-start items-center h-max text-3xl md:text-5xl font-bold border-b-4 border-white pb-2"
     >
       Previous Events <SVGLinesArrowTilted width="25" height="25" />
     </h1>
-    <div class="relative">
+    <section class="relative">
       <div
         class="pt-20 md:mx-20 flex overflow-scroll gap-5 no-scrollbar"
         ref="scrollableRef"
@@ -48,39 +50,41 @@
         @click="hanldeScroll('L')"
         class="hidden md:block absolute bg-black top-[52%] left-5 md:left-8 p-2 rotate-180 cursor-pointer"
       />
-      <div
-        class="absolute md:hidden top-[50%] right-[-70px] flex flex-col justify-center items-center"
-      >
-        <SVGLinesScrollArrow class="bg-black/70 rounded-full p-2" />
-        <h1 class="text-xl text-white">Swipe</h1>
-      </div>
-    </div>
-    <div class="flex w-full justify-center pt-10">
-      <div class="flex justify-center items-center gap-5">
+      <figure class="mt-5 md:hidden flex flex-col justify-center items-center">
+        <SVGLinesArrowStraight
+          width="100"
+          height="50"
+          class="md:hidden bg-black p-2"
+        />
+        <span class="text-2xl mt-2 text-white">Swipe</span>
+      </figure>
+    </section>
+    <section class="flex w-full justify-center pt-10">
+      <nav class="flex justify-center items-center gap-5">
         <div
-          class="bg-black text-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+          class="bg-black text-white py-2 px-4 md:p-5 font-bold text-lg md:text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
         >
           1
         </div>
         <div
-          class="bg-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+          class="bg-white py-2 px-4 md:p-5 font-bold text-lg md:text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
         >
           2
         </div>
         <div
-          class="bg-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+          class="bg-white py-2 px-4 md:p-5 font-bold text-lg md:text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
         >
           3
         </div>
         <div class="text-xl font-bold">...</div>
         <div
-          class="bg-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
+          class="bg-white py-2 px-4 md:p-5 font-bold text-lg md:text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
         >
           10
         </div>
-      </div>
-    </div>
-  </div>
+      </nav>
+    </section>
+  </section>
 </template>
 <script setup>
 const scrollableRef = ref(null);

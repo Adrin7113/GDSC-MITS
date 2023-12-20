@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-[500px] p-20 bg-gYellow mono relative pt-44">
+  <section class="w-full min-h-[500px] p-20 bg-gYellow mono relative pt-44">
     <SVGSparkle
       color1="#7000FF"
       color2="#000000"
@@ -48,15 +48,15 @@
         @click="hanldeScroll('L')"
         class="hidden md:block absolute bg-black top-[52%] left-5 md:left-8 p-2 rotate-180 cursor-pointer"
       />
-      <div
+      <figure
         class="absolute md:hidden top-[50%] right-[-70px] flex flex-col justify-center items-center"
       >
         <SVGLinesScrollArrow class="bg-black/70 rounded-full p-2" />
-        <h1 class="text-xl text-white">Swipe</h1>
-      </div>
+        <span class="text-xl text-white">Swipe</span>
+      </figure>
     </div>
-    <div class="flex w-full justify-center pt-10">
-      <div class="flex justify-center items-center gap-5">
+    <section class="flex w-full justify-center pt-10">
+      <nav class="flex justify-center items-center gap-5">
         <div
           class="bg-black text-white p-5 font-bold text-2xl hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
         >
@@ -67,9 +67,9 @@
         >
           2022 - 2023
         </div>
-      </div>
-    </div>
-  </div>
+      </nav>
+    </section>
+  </section>
 </template>
 <script setup>
 const scrollableRef = ref(null);
