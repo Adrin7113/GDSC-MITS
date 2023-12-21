@@ -1,8 +1,11 @@
 <template>
-  <div class="min-h-screen max-w-screen">
+  <!-- class="select-none". Removes text selection. Remove if needed -->
+  <div class="min-h-screen max-w-screen select-none">
     <main>
       <CommonNavbar />
       <slot />
+
+      <CommonFooter />
     </main>
   </div>
 </template>

@@ -16,7 +16,7 @@
     />
     <h1
       @click="hanldeScroll"
-      class="flex gap-5 w-max justify-start items-center h-max text-3xl md:text-5xl font-bold border-b-4 pb-2 mb-10"
+      class="flex gap-5 w-max justify-start items-center h-max text-3xl md:text-5xl font-bold border-b-4 pb-2 mb-10 cursor-default"
     >
       Blogs <SVGLinesArrowTilted width="25" height="25" />
     </h1>

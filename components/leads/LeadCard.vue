@@ -22,7 +22,7 @@
       ></div> -->
       <!-- Or use NuxtImg (Needs testing) -->
       <NuxtImg
-        class="w-1/2 rounded-xl"
+        class="w-1/2 rounded-sm"
         :src="tempLead.picture"
         alt="Lead Picture"
       />

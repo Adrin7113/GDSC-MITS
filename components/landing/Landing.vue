@@ -1,4 +1,3 @@
-import type { SVGSparkle } from '#build/components';
 <template>
   <main class="flex flex-col items-center pt-10 md:pt-40 pb-20 mono">
     <section class="relative">
