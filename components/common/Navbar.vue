@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between p-10 pb-5 border-b-2">
+  <nav class="flex h-[15vh] justify-between items-center p-10 pb-5 border-b-2">
     <NuxtImg
       class="h-12"
       src="/logo.png"

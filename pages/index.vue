@@ -6,6 +6,7 @@
     <EventsPreviousEvents />
     <LeadsLanding />
     <AboutLanding />
+    <BlogsLanding />
   </div>
 </template>
 <script setup></script>
